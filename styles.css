@@ -1,134 +1,186 @@
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Color Palette */
+:root {
+  --dark-grayish-blue: #2A2D3A;
+  --light-grayish-blue: #B7C1D1;
+  --soft-white: #E9EAEC;
+  --deep-space-blue: #1A1E28;
+  --muted-blue: #505872;
+}
+html, body {
+  height: 100%; 
 }
 
-#strange {
-  animation: rotate 20s infinite linear;
-  width:100px;
-  height:100px;
+@font-face {
+  font-family: 'Alduba'; /* You can name it anything you like */
+  src: url('fonts/AlbulaPro-Bold.otf') format('opentype');
 }
 
-.head-section{
-  display: flex;
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  /* padding: 1rem; */
+@font-face {
+  font-family: 'Alduba-norm'; /* You can name it anything you like */
+  src: url('fonts/AlbulaPro-NormalMedium.otf') format('opentype');
 }
 
-/* Resetting some default browser styles */
-body, h1, h2, h3, p, a {
+
+body {
+  font-family: 'Alduba-norm','Arial', sans-serif;
+  /* background-color: var(--dark-grayish-blue); */
+  color: var(--deep-space-blue);
   margin: 0;
   padding: 0;
+
+  background-image: url('assets/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;  /* This will make the image cover the entire viewport */
+  /* background-position: center center;  */
+  background-position: center center; 
+  background-attachment: fixed; /* This will fix the background image position while scrolling */
 }
 
-/* Adding a black background color to our page */
-body {
-  background: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  line-height: 1.6em;
-  /* Ensure the page takes up full viewport height */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+h1{
+  font-family: 'Alduba',"Georgia", serif;
 }
 
-/* Styling the header */
-.header-content {
-  padding: 20px;
-  background: #50b3a2;
+p {
+  font-size: 16px;
+  line-height: 26px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
-.title-link {
-  color: #333;
-  text-decoration: none;
+.container {
+  margin: 100px 15px;
+  max-width: 600px;
 }
 
-/* Styling the navigation */
-.nav-section {
-  background: #333;
-  color: #fff;
-  overflow: auto;
-}
-
-.nav-section a {
-  float: left;
-  display: block;
-  padding: 14px 16px;
-  text-decoration: none;
-  color: white;
-}
-
-/* Styling the main content */
-main {
-  padding: 20px;
-  /* Allows content to expand while pushing footer to the bottom */
-  flex: 1;
-}
-
-.intro-section, .projects-section {
-  margin-bottom: 20px;
-}
-
-/* Styling the footer */
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Existing Styles ... */
-
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .nav-section a {
-    float: none;
-    text-align: center;
-    padding: 10px;
+@media screen and (min-width: 600px){ 
+  .container{
+    padding: 0 30px;
+  }
+  p{
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
+.top-section {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
 
-.video-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  
+  display: flex;
+  justify-content: center;
 }
 
-.video-info {
-    flex: 1;
+.white-background{
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.7);
 }
 
-.video-container {
-    flex: 1;
+
+
+/* #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
-.video-title {
+nav li {
+  font-size: 1.2rem;
+  color: var(--deep-space-blue);
+  cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=YOUR_FONT_HERE&display=swap');
+
+.intro-content {
+    text-align: center;
+    /* padding: 150px 10%; */
+    /* font-family: Georgia, serif; */
+
+  margin-top:15px;
+
+}
+
+.intro-content h1 {
+    font-size: 3.5rem;
+    color: var(--deep-space-blue);
+    margin-bottom: 30px;
+    margin-top:15px;
+    position: relative;
+
+    Underline decoration
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 20%;
+        height: 3px;
+        background: var(--deep-space-blue);
+    }
+}
+
+.intro-content p:first-of-type { 
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--deep-space-blue);
+    margin-bottom: 0px;
+}
+.intro-content p:nth-child(3) { 
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--deep-space-blue);
+  margin-bottom: 30px;
 }
 
-.video-description {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+.intro-content p {
+    font-size: 1.1rem;
+    color: var(--deep-space-blue);
+    line-height: 1.8;
+    margin-bottom: 50px;
+    position: relative;
+
+    /* Dotted decoration */
+    &::before {
+        /* content: "...."; */
+        position: absolute;
+        top: 0;
+        left: -20px;
+        font-size: 2rem;
+        line-height: 1.1;
+        letter-spacing: 3px;
+        color: var(--deep-space-blue);
+    }
 }
 
-.video-tags .tag {
-    background-color: #007bff;
-    color: white;
-    padding: 0.2rem 0.5rem;
-    margin-right: 0.2rem;
-    border-radius: 0.2rem;
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(180deg, var(--light-grayish-blue) -106%, var(--deep-space-blue) 100%);
+  border-radius: 30px;
+  color: #E1E4E8;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border: 2px solid #0f1219; /* Adding a darker border to resemble the design */
+
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
+.cta-button:hover {
+  transform: translateY(-2px);
 }
