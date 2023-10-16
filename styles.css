@@ -72,11 +72,14 @@ p {
 
 nav{
   background-color: white;
+
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.7);
+
 }
 
 .white-background{
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.7);
+  /* box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.7); */
 }
 
 nav ul {
@@ -84,6 +87,9 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  height: 50px;
 }
 
 nav li {
@@ -161,10 +167,78 @@ nav li {
   text-transform: uppercase;
   cursor: pointer;
   transition: transform 0.3s;
-  border: 2px solid #0f1219; /* Adding a darker border to resemble the design */
+  border: 2px solid #0f1219;
 
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
+}
+
+
+.icon-row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.icon-container {
+  position: relative;
+  text-align: center;
+  width: 24%;
+}
+
+.circle-icon {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+
+  transform: scale(1); /* Default size */
+  transition: transform 0.3s ease; /* Smooth transition for growth effect */
+}
+
+.brain{background-image: url('assets/brain-icon.svg');}
+.code{background-image: url('assets/code-icon.svg');}
+.globe{background-image: url('assets/globe-icon.svg');}
+
+.icon-text {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 4px;
+  width: 400px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+  z-index: 1;
+  /* bottom: 100%; */
+  margin-bottom: 10px;
+
+
+  bottom: calc(100% + 10px); /* Position it above the icon, considering its own height and some margin */
+  left: 50%;
+  transform: translateX(-50%); /* This keeps the tooltip centered above the icon */
+}
+
+@media screen and (max-width: 600px) {
+  .icon-text {
+      width: 100%;
+      left: 0;
+      transform: none;
+  }
+}
+
+.icon-container:hover .icon-text {
+  display: block;
+}
+
+.icon-container.active .circle-icon {
+  transform: scale(1.1); /* Increase the size by 10% */
+  transition: transform 0.3s ease; /* Smooth transition for growth effect */
 }
