@@ -27,7 +27,6 @@ body {
   color: var(--deep-space-blue);
   margin: 0;
   padding: 0;
-
   background-image: url('assets/background.svg');
   background-repeat: no-repeat;
   background-size: cover;  /* This will make the image cover the entire viewport */
@@ -201,6 +200,16 @@ nav li {
 
   transform: scale(1); /* Default size */
   transition: transform 0.3s ease; /* Smooth transition for growth effect */
+  animation: rhythmicGrowShrink 3s infinite;
+}
+
+@keyframes rhythmicGrowShrink {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05); /* Adjust this value for more or less growth */
+  }
 }
 
 .brain{background-image: url('assets/brain-icon.svg');}
@@ -213,12 +222,12 @@ nav li {
   background-color: #fff;
   color: #333;
   padding: 20px;
-  border-radius: 4px;
   width: 400px;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
   z-index: 1;
   /* bottom: 100%; */
   margin-bottom: 10px;
+  border-radius: 30px;
 
 
   bottom: calc(100% + 10px); /* Position it above the icon, considering its own height and some margin */
@@ -239,6 +248,7 @@ nav li {
 }
 
 .icon-container.active .circle-icon {
-  transform: scale(1.1); /* Increase the size by 10% */
+  transform: scale(1.6); /* Increase the size by 10% */
   transition: transform 0.3s ease; /* Smooth transition for growth effect */
+  animation: none;
 }
