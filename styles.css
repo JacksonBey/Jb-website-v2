@@ -412,3 +412,53 @@ nav li {
   display: block; /* Puts the date on a new line. */
   margin-bottom: 10px; /* Spacing after the date. */
 }
+
+
+/* endorsements  */
+.endorsement-container {
+  width: 80%;
+  margin-top: 50px;
+}
+.recommendation {
+  display: flex;
+  /* align-items: center; */
+  margin-bottom: 30px;
+  padding: 15px;
+  /* background-color: #34495E; */
+  background-color: #E9E9E9;
+  border-radius: 10px;
+}
+.endorsement-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.endorsement-container .name {
+  font-size: 24px;
+  font-weight: bold;
+}
+.endorsement-container .title-rel {
+  font-size: 18px;
+  color: var(--muted-blue);
+  margin: 5px 0;
+}
+.endorsement-container .endorsement {
+  flex-grow: 1;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 20px;
+
+}
+.endorsement-container a {
+  text-decoration: none;
+  color: var(--muted-blue);
+  font-size: 16px;
+}
+.endorsement-container a:hover {
+  text-decoration: underline;
+}
+
+br{
+  margin-top:10px;
+}
