@@ -417,7 +417,7 @@ nav li {
 /* endorsements  */
 .endorsement-container {
   width: 80%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .recommendation {
   display: flex;
@@ -461,4 +461,69 @@ nav li {
 
 br{
   margin-top:10px;
+}
+
+
+/* contact page  */
+.contact-section {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+.intro h2 {
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  display: block;
+}
+
+/* Hover effect for links */
+.contact-info a:hover {
+  color: #0077b5; /* or any other color you want for hover */
 }
