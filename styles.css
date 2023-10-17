@@ -81,9 +81,6 @@ nav ul li a {
   color: inherit;
 }
 
-/* nav ul li a:hover {
-  text-decoration: underline;
-} */
 nav ul li a:hover,
 nav ul li .home-icon-link:hover {
   text-decoration: none;
@@ -428,10 +425,8 @@ nav li {
 }
 .recommendation {
   display: flex;
-  /* align-items: center; */
   margin-bottom: 30px;
   padding: 15px;
-  /* background-color: #34495E; */
   background-color: #E9E9E9;
   border-radius: 10px;
 }
