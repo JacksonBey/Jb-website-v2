@@ -105,6 +105,7 @@ nav li {
   cursor: pointer;
 }
 
+/* landing page */
 .intro-content {
     text-align: center;
     margin-top:15px;
@@ -145,7 +146,7 @@ nav li {
     font-size: 1.1rem;
     color: var(--deep-space-blue);
     line-height: 1.8;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     position: relative;
 
     /* Dotted decoration */
@@ -259,4 +260,82 @@ nav li {
   transform: scale(1.6); /* Increase the size by 10% */
   transition: transform 0.3s ease; /* Smooth transition for growth effect */
   animation: none;
+}
+
+/* projects page  */
+.project-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-display p{
+  font-size: 14px!important;
+  margin-bottom: 15px !important;
+}
+
+.text-section {
+  flex-basis: 45%;
+}
+
+.media-section {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title {
+  /* font-size: 24px; */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-subtitle {
+  /* font-size: 18px; */
+  margin-bottom: 15px;
+}
+
+.project-subtitle a {
+  text-decoration: none;
+  color: inherit;
+  transition: underline 0.3s ease;
+}
+
+.project-subtitle a:hover {
+  text-decoration: underline;
+}
+
+.project-description {
+  margin-bottom: 15px;
+}
+
+.technology-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background-color: #e6e6e6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.project-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+
+.project-video {
+  max-width: 100%;
+  /* border-radius: 10px; */
 }
