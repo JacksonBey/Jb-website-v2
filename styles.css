@@ -11,28 +11,26 @@ html, body {
 }
 
 @font-face {
-  font-family: 'Alduba'; /* You can name it anything you like */
+  font-family: 'Alduba';
   src: url('fonts/AlbulaPro-Bold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Alduba-norm'; /* You can name it anything you like */
+  font-family: 'Alduba-norm';
   src: url('fonts/AlbulaPro-NormalMedium.otf') format('opentype');
 }
 
 
 body {
   font-family: 'Alduba-norm','Arial', sans-serif;
-  /* background-color: var(--dark-grayish-blue); */
   color: var(--deep-space-blue);
   margin: 0;
   padding: 0;
   background-image: url('assets/background.svg');
   background-repeat: no-repeat;
-  background-size: cover;  /* This will make the image cover the entire viewport */
-  /* background-position: center center;  */
+  background-size: cover;
   background-position: center center; 
-  background-attachment: fixed; /* This will fix the background image position while scrolling */
+  background-attachment: fixed;
 }
 
 h1{
@@ -211,8 +209,8 @@ nav li {
   background-position: center;
   margin: 0 auto;
 
-  transform: scale(1); /* Default size */
-  transition: transform 0.3s ease; /* Smooth transition for growth effect */
+  transform: scale(1);
+  transition: transform 0.3s ease;
   animation: rhythmicGrowShrink 3s infinite;
 }
 
@@ -221,7 +219,7 @@ nav li {
       transform: scale(1);
   }
   50% {
-      transform: scale(1.05); /* Adjust this value for more or less growth */
+      transform: scale(1.05);
   }
 }
 
@@ -238,14 +236,13 @@ nav li {
   width: 400px;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
   z-index: 1;
-  /* bottom: 100%; */
   margin-bottom: 10px;
   border-radius: 30px;
 
 
-  bottom: calc(100% + 10px); /* Position it above the icon, considering its own height and some margin */
+  bottom: calc(100% + 10px);
   left: 50%;
-  transform: translateX(-50%); /* This keeps the tooltip centered above the icon */
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 600px) {
@@ -261,8 +258,8 @@ nav li {
 }
 
 .icon-container.active .circle-icon {
-  transform: scale(1.6); /* Increase the size by 10% */
-  transition: transform 0.3s ease; /* Smooth transition for growth effect */
+  transform: scale(1.6);
+  transition: transform 0.3s ease;
   animation: none;
 }
 
@@ -295,14 +292,12 @@ nav li {
 }
 
 .project-title {
-  /* font-size: 24px; */
   font-weight: bold;
   color: #333;
   margin-bottom: 10px;
 }
 
 .project-subtitle {
-  /* font-size: 18px; */
   margin-bottom: 15px;
 }
 
@@ -341,7 +336,6 @@ nav li {
 
 .project-video {
   max-width: 100%;
-  /* border-radius: 10px; */
 }
 
 .projects-section {
@@ -366,19 +360,19 @@ nav li {
   }
 }
 
-
 /* work history  */
 .experience-section section {
   padding: 40px;
-  max-width: 800px; /* Adjust as needed. */
-  margin: 0 auto; /* Centers the sections. */
+  max-width: 800px;
+  margin: 0 auto;
 }
+
 .experience-section h1{
   font-size: 32px;
 }
 
 .experience-section h1, .experience-section h2 {
-  border-bottom: 2px solid #666; /* Adds a line below the headings. */
+  border-bottom: 2px solid #666;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
@@ -389,16 +383,16 @@ nav li {
 
 /* About Section Styles */
 #about {
-  background-color: #FFF; /* White background for contrast. */
-  padding: 60px 40px; /* More padding for this section. */
+  background-color: #FFF;
+  padding: 60px 40px;
   margin-bottom: 15px;
   border-radius: 10px;
 }
 
 /* Work History Section Styles */
 #work-history {
-  background-color: #E9E9E9; /* Slightly darker gray than the page background. */
-  padding: 60px 40px; /* Consistent padding with the About section. */
+  background-color: #E9E9E9;
+  padding: 60px 40px;
   border-radius: 10px;
 }
 
@@ -411,10 +405,10 @@ nav li {
 }
 
 .date {
-  font-size: 0.9em; /* Slightly smaller font for the date. */
-  color: #999; /* Grayish text color for the date. */
-  display: block; /* Puts the date on a new line. */
-  margin-bottom: 10px; /* Spacing after the date. */
+  font-size: 0.9em; 
+  color: #999;
+  display: block;
+  margin-bottom: 10px;
 }
 
 
@@ -464,7 +458,6 @@ nav li {
 br{
   margin-top:10px;
 }
-
 
 /* contact page  */
 .contact-section {
@@ -527,5 +520,5 @@ br{
 
 /* Hover effect for links */
 .contact-info a:hover {
-  color: #0077b5; /* or any other color you want for hover */
+  color: #0077b5;
 }
