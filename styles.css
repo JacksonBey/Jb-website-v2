@@ -531,6 +531,7 @@ nav li {
   width: 80%;
   margin-top: 30px;
 }
+
 .recommendation {
   display: flex;
   margin-bottom: 30px;
@@ -538,6 +539,13 @@ nav li {
   background-color: #E9E9E9;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 600px) {
+  .recommendation{
+    flex-direction: column;
+  }
+}
+
 .endorsement-container img {
   width: 80px;
   height: 80px;
