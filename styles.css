@@ -107,6 +107,108 @@ nav li {
   cursor: pointer;
 }
 
+
+/* Hamburger styles */
+
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 18px;
+  background-color: var(--deep-space-blue);
+  transition: 0.3s;
+}
+
+/* Mobile styles */
+
+@media screen and (max-width: 600px) {
+  header{
+    position: static;
+  }
+  .hamburger {
+    display: flex; /* Show the hamburger on mobile */
+    margin-top: 10px;
+  }
+
+  #nav-list {
+    /* z-index: 9999; */
+    display: none; /* Hide the navigation by default */
+    flex-direction: column; /* Make it vertical */
+    width: 100%;
+  }
+
+  #nav-list {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  }
+
+  #nav-list.active { /* Show the navigation when active */
+    display: flex;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Animation for the hamburger to "X" transformation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #nav-list {
+    position: absolute; /* Absolute position */
+    top: 140px; /* Position it below the header */
+    left: 0;
+    width: 100%;
+    max-height: 0; /* By default it's closed */
+    /* overflow: hidden; */
+    transition: max-height 0.3s ease-in-out; /* Transition effect */
+    z-index: 1000; /* High z-index to appear on top */
+    background-color: white; /* A background to differentiate from the content below */
+    padding-bottom: 10px;
+  }
+
+  #nav-list li{
+    background-color: white; /* A background to differentiate from the content below */
+
+  }
+
+  #nav-list li:last-child{
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0f1219;
+
+  }
+
+  nav li, nav li a {
+    background-color: white;
+    width: 100%;
+  }
+
+  #nav-list.active {
+    max-height: 300px; /* Set an approximate max height when open. Adjust if necessary */
+    width: 100%;
+  }
+}
+
+
 /* landing page */
 .intro-content {
     text-align: center;
@@ -251,9 +353,17 @@ nav li {
 
 @media screen and (max-width: 600px) {
   .icon-text {
-      width: 100%;
-      left: 0;
-      transform: none;
+    position: fixed;
+    font-size: 14px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 90%;
+    max-width: none;
+    border-radius: 0; 
+    z-index: 10;
   }
 }
 
